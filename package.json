@@ -1,0 +1,45 @@
+{
+  "name": "kindred-geometry",
+  "description": "Load and bind geometry data in WebGL",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "posttest": "standard",
+    "start": "budo demo.js:bundle.js -- -t kindred-shader/transform",
+    "bundle": "browserify demo.js -o bundle.js -t kindred-shader/transform",
+    "preversion": "npm t",
+    "test": "node test | tspec"
+  },
+  "dependencies": {
+    "1t": "^0.1.0",
+    "array-pack-2d": "^1.0.0",
+    "compute-dtype": "^1.0.0",
+    "dtype": "^2.0.0",
+    "face-normals": "0.0.0",
+    "gl-to-dtype": "^1.1.0",
+    "is-typedarray": "^1.0.0",
+    "kindred-shader": "^1.0.1",
+    "normals": "^1.1.0",
+    "shortid": "^2.2.6",
+    "unindex-mesh": "^2.0.0"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.1",
+    "budo": "^8.3.0",
+    "bunny": "^1.0.1",
+    "canvas-fit": "^1.5.0",
+    "canvas-orbit-camera": "^1.0.2",
+    "gl-mat4": "^1.1.4",
+    "kindred-shader": "^1.0.1",
+    "standard": "^7.1.2",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.0"
+  },
+  "keywords": [
+    "ecosystem:kindred"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kindredjs/kindred-geometry"
+  }
+}

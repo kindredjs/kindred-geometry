@@ -99,12 +99,16 @@ KindredGeometry.prototype._getBindings = function (gl) {
   return bindings
 }
 
-KindredGeometry.prototype.draw = function (gl, primitive) {
+KindredGeometry.prototype.draw = function (gl, primitive, start, count) {
   var bindings = this._getBindings(gl)
   var state = bindings.attributeState
 
+  var drawStart = start || 0
+  var drawCount = typeof count === 'number' ? count : this.length
+  var prim = typeof primitive === 'number' ? primitive : gl.TRIANGLES
+
   state.done(bindings.id)
-  gl.drawArrays(primitive || gl.TRIANGLES, 0, this.length)
+  gl.drawArrays(prim, drawStart, drawCount)
 }
 
 KindredGeometry.prototype.dispose = function () {

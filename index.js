@@ -5,7 +5,7 @@ var pack = require('array-pack-2d')
 
 module.exports = KindredGeometry
 
-var counter = parseInt(Math.random().toString(32).slice(2, 10), 36)
+var counter = parseInt(Math.random().toString(32).slice(2, 10), 32)
 
 function KindredGeometry (cells, positions, normals, uvs) {
   if (!(this instanceof KindredGeometry)) {
